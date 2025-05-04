@@ -1,0 +1,173 @@
+# 4.42 Run Antivirus Scan
+
+## Task Perform Antivirus Scan on Impacted Hosts to Identify and Remove Malicious Files
+
+## Conditions
+
+Given access to impacted systems and antivirus tools (either built-in or deployable), the operator will conduct antivirus scans to detect and remove malware or unauthorized files. Scans should be performed locally and as part of overall eradication efforts.
+
+> **Operator Note:** Antivirus scans are a foundational eradication technique to ensure any dormant malware, webshells, droppers, or exploit tools left behind by threat actors are discovered and removed.
+
+## Standards
+
+* Team member selects and configures appropriate antivirus scanning tools for all platforms.
+* Team member performs full disk scans on impacted systems.
+* Team member reviews antivirus results and quarantines/removes malware.
+* Team member documents scan results, including threats identified and actions taken.
+* Team member validates post-scan that systems are clean and functioning properly.
+
+## End State
+
+All impacted systems have been scanned for malware and unauthorized files. Detected threats have been removed, and scan results have been reviewed and documented.
+
+---
+
+## Notes
+
+- Antivirus scanning should be coordinated with enclave/system owners as scans can be resource intensive.  
+- Antivirus engines should be updated before scan to ensure current detection capabilities.  
+- Any detections should be validated (false positives vs true malware).
+
+---
+
+## Manual Steps
+
+### Step 1: Select Antivirus Tool for Target System
+
+| Tool | Platform | Installation | Usage |
+|------|----------|--------------|-------|
+| Windows Defender | Windows | Built-in | Full disk scan via PowerShell or GUI |
+| Malwarebytes (Free/Commercial) | Windows/macOS | Download from vendor | Run full scan after install |
+| ClamAV | Linux/macOS | `apt install clamav` or `brew install clamav` | CLI full disk scan |
+| ESET Endpoint (Commercial) | Windows/Linux/macOS | Enterprise deployment | Full disk scan with logs |
+
+> **Operator Note:** Prefer Windows Defender on Windows for native integration and reporting. Use ClamAV or enterprise AV on Linux/macOS.
+
+---
+
+### Step 2: Update Antivirus Definitions
+
+#### Windows Defender (PowerShell)
+
+```powershell
+Update-MpSignature
+```
+
+#### ClamAV (Linux/macOS)
+
+```bash
+freshclam
+```
+
+#### Malwarebytes / ESET
+
+- Use built-in "Update" functionality from UI
+
+---
+
+### Step 3: Run Full Disk Scan
+
+#### Windows Defender (PowerShell)
+
+```powershell
+Start-MpScan -ScanType FullScan
+```
+
+#### ClamAV (Linux/macOS)
+
+```bash
+clamscan -r --bell -i / > clamav_scan_results.txt
+```
+
+> - `-r` → recursive  
+> - `--bell` → notify when detections occur  
+> - `-i` → only show infected files
+
+#### Malwarebytes / ESET
+
+- From UI, select "Full Scan" or "Scan entire computer"
+
+---
+
+### Step 4: Review and Take Action on Findings
+
+- Review detections → confirm true positives
+- Quarantine or delete malware as permitted
+- Record action taken for each detection
+
+---
+
+### Step 5: Validate System Cleanliness
+
+- Run secondary scan or verification pass
+- Review quarantine, logs, and system behavior
+- Document as "No further detections" or escalate as necessary
+
+---
+
+## Running Script (Linux - ClamAV Quick Scan + Output)
+
+```bash
+clamscan -r -i /home > scan_results_home.txt
+```
+
+> **Operator Note:** Direct output to file for easy review and documentation.
+
+---
+
+## Dependencies
+
+* Administrative/root access to target hosts
+* Antivirus software installed and up to date
+* Coordination with system owners to schedule scan windows
+* Network access to retrieve updated antivirus signatures (if required)
+
+---
+
+## Other Available Tools
+
+| Tool | Platform | Installation | Usage |
+|------|----------|--------------|-------|
+| Windows Defender | Windows | Built-in | Full disk + realtime scanning |
+| ClamAV | Linux/macOS | `apt-get install clamav` or `brew install clamav` | CLI scan for files and directories |
+| Malwarebytes | Windows/macOS | Download from vendor | GUI scanning, adware/malware removal |
+| ESET Endpoint | Cross-platform | Enterprise deployment | Full feature endpoint security suite |
+
+> **Operator Note:** Always verify AV engines are up-to-date before running scans to ensure maximum detection accuracy.
+
+---
+
+## Operator Recommendations and Additional Tools
+
+### Operator Checklist
+
+- [ ] Identify and deploy antivirus tools to all impacted hosts.
+- [ ] Update antivirus definitions before scanning.
+- [ ] Run full disk scans (not quick scans).
+- [ ] Quarantine or delete malicious files after review.
+- [ ] Validate systems post-scan for cleanliness.
+- [ ] Document findings, actions taken, and verification results.
+
+### Best Practices
+
+- Prefer native or enterprise-managed AV tools whenever possible.
+- Run scans during maintenance windows when possible to avoid disruption.
+- Retain scan logs as part of incident record.
+- Use antivirus as part of layered validation, not sole eradication method.
+
+---
+
+## References
+
+[Microsoft Defender Antivirus documentation](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-in-windows)  
+[ClamAV Open Source Antivirus](https://www.clamav.net/)  
+[Malwarebytes](https://www.malwarebytes.com/)  
+[ESET Endpoint Protection](https://www.eset.com/)
+
+---
+
+## Revision History
+
+| Date | Version | Description | Author |
+|------|---------|-------------|--------|
+| 2025-05-02 | 1.0 | Fully generated operator guide for running antivirus scans, including tooling, operator checklist, and validation | Leo |
