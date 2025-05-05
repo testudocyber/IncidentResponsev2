@@ -1,0 +1,32 @@
+site_name: Incident Response Handbook
+site_url: https://testudocyber.github.io/IncidentResponsev2/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Preparation:
+      - Overview: 1.Preparation/index.md
+  - Identification:
+      - Overview: 2.Identification/index.md
+  - Containment:
+      - Overview: 3.Containment/index.md
+  - Eradication:
+      - Overview: 4.Eradication/index.md
+  - Recovery:
+      - Overview: 5.Recovery/index.md
+  - Lessons Learned:
+      - Overview: 6.LessonsLearned/index.md
+  - Reference Documents:
+      - Overview: ReferenceDocuments/index.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
