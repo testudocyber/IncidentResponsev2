@@ -23,7 +23,7 @@ nav:
   - Lessons Learned:
       - Overview: 6.LessonsLearned/index.md
   - Reference Documents:
-      - Overview: ReferenceDocuments/index.md
+      - Overview: ReferenceDocuments/README.md
 
 markdown_extensions:
   - admonition
