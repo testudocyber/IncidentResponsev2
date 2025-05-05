@@ -1,3 +1,4 @@
+
 site_name: Incident Response Handbook
 site_url: https://testudocyber.github.io/IncidentResponsev2/
 theme:
@@ -10,20 +11,162 @@ theme:
 
 nav:
   - Home: index.md
-  - Preparation:
-      - Overview: 1.Preparation/index.md
-  - Identification:
-      - Overview: 2.Identification/index.md
-  - Containment:
-      - Overview: 3.Containment/index.md
-  - Eradication:
-      - Overview: 4.Eradication/index.md
-  - Recovery:
-      - Overview: 5.Recovery/index.md
-  - Lessons Learned:
-      - Overview: 6.LessonsLearned/index.md
+  - 1 - Preparation:
+      - Overview: 1.Preparation/README.md
+      - Overview: 1.Preparation/1.01-Troop_Leading_Procedures/README.md
+      - Overview: 1.Preparation/1.02-Receive_Mission/README.md
+      - Overview: 1.Preparation/1.03-Personnel_Status/README.md
+      - Overview: 1.Preparation/1.04-Legal_Support/README.md
+      - Overview: 1.Preparation/1.05-Partner_Engagements/README.md
+      - Overview: 1.Preparation/1.06-Create_and_Execute_IR_Orders/README.md
+      - Overview: 1.Preparation/1.07-Integrate_Additional_Support/README.md
+      - Overview: 1.Preparation/1.08-Mission_Intent/README.md
+      - Overview: 1.Preparation/1.09-Continuous_AARs/README.md
+      - Overview: 1.Preparation/1.10-Incident_Tracking_and_Reporting/README.md
+      - Overview: 1.Preparation/1.13-Review_Information_Security_Policies_Constraint/README.md
+      - Overview: 1.Preparation/1.14-Request_Logs/README.md
+      - Overview: 1.Preparation/1.15-Interview_Network_Owner/README.md
+      - Overview: 1.Preparation/1.16-Establish_Network_Owner_Priorities_Objectives/README.md
+      - Overview: 1.Preparation/1.17-Establish_Mission_Log/README.md
+      - Overview: 1.Preparation/1.18-Request_Network_Accounts/README.md
+      - Overview: 1.Preparation/1.19-Legal_Authorities_Regulatory_Constraints/README.md
+      - Overview: 1.Preparation/Preparation_References/README.md
+  - 2 - Identification:
+      - Overview: 2.Identification/README.md
+      - Overview: 2.Identification/2.01-Review_organizational_processes_and_conduct_a_site_survey/README.md
+      - Overview: 2.Identification/2.02-Create_Active_IP_List/README.md
+      - Overview: 2.Identification/2.03-DNS_Host_Name_Mapping/README.md
+      - Overview: 2.Identification/2.04-Active_Host_and_Service_Enumeration/README.md
+      - Overview: 2.Identification/2.05-Active_IP_List_on_Key_Ports/README.md
+      - Overview: 2.Identification/2.06-All_Port_Scan/README.md
+      - Overview: 2.Identification/2.07-Scan_ICS_Equipment_Ports/README.md
+      - NESSUS: 2.Identification/2.08-Conduct_Vulnerability_Scan/NESSUS.md
+      - OPENVAS(KALI): 2.Identification/2.08-Conduct_Vulnerability_Scan/OPENVAS(KALI).md
+      - OPENVAS(Ubuntu): 2.Identification/2.08-Conduct_Vulnerability_Scan/OPENVAS(Ubuntu).md
+      - Overview: 2.Identification/2.08-Conduct_Vulnerability_Scan/README.md
+      - Overview: 2.Identification/2.11-Determine_Installed_Software/README.md
+      - Overview: 2.Identification/2.12-Perform_SCAP_Configuration_Scan/README.md
+      - Overview: 2.Identification/2.13-Perform_STIG_Scan/README.md
+      - Overview: 2.Identification/2.14-Gather_AD_Structure_Information/README.md
+      - Overview: 2.Identification/2.15-AD_Configuration_Scan_with_Powershell/README.md
+      - Overview: 2.Identification/2.16-List_all_AD_Domain_Accounts/README.md
+      - Overview: 2.Identification/2.17-Scan_Device_For_Default_Admin_Password/README.md
+      - Overview: 2.Identification/2.18-Review_Organizational_User_Policies/README.md
+      - Overview: 2.Identification/2.19-Create_firewall_rule_list/README.md
+      - Overview: 2.Identification/2.20-Reivew_Firewall_Config_for_IOCs/README.md
+  - 3 - Containment:
+      - Overview: 3.Containment/README.md
+      - Overview: 3.Containment/3.01_Export_users_from_Active_Directory/README.md
+      - Overview: 3.Containment/3.02_Export_groups_from_Active_Directory/README.md
+      - Overview: 3.Containment/3.03_Export_Group_Policy_Objects_from_Active_Directory/README.md
+      - Overview: 3.Containment/3.04_Export_Trust_relationships_from_Active_Directory/README.md
+      - Overview: 3.Containment/3.05_Export_OU_Structure_from_Active_Directory/README.md
+      - Overview: 3.Containment/3.06_Monitor_AD_New_Account_Creation/README.md
+      - Overview: 3.Containment/3.07_Create_team_admin_account_in_AD/README.md
+      - Overview: 3.Containment/3.08_Change_Domain_Administrator_account/README.md
+      - Overview: 3.Containment/3.09_Disable_Domain_Administrator_password/README.md
+      - Overview: 3.Containment/3.10_Change_or_disable_Workstation_local_Administrators/README.md
+      - Overview: 3.Containment/3.11_Verify_patch_compliance_on_all_hosts/README.md
+      - Overview: 3.Containment/3.12_Enforce_Group_Policy/README.md
+      - Overview: 3.Containment/3.13_Restrict_Non-IR_Personnel_Access/README.md
+      - Overview: 3.Containment/3.14_Block_External_Communication/README.md
+      - Overview: 3.Containment/3.15_Disable_Scheduled_Jobs_and_Tasks/README.md
+      - Overview: 3.Containment/3.16_Disble_Windows_Services/README.md
+      - Overview: 3.Containment/3.17_Remove_Unapproved_Software_and_Tools/README.md
+      - Overview: 3.Containment/3.18_Verify_Containment_is_Successful/README.md
+      - Overview: 3.Containment/3.20_Conduct_Containment_Outbrief/README.md
+      - Overview: 3.Containment/3.20_Document_Containment_Actions/README.md
+      - Overview: 3.Containment/3.21_Finalize_Containment_Documentation/README.md
+  - 4 - Eradication:
+      - Overview: 4.Eradication/README.md
+      - placeholder: 4.Eradication/placeholder.md
+      - Overview: 4.Eradication/4.01_Synchronize_all_host_clocks/README.md
+      - Overview: 4.Eradication/4.02_Enable_Account_Usage_Auditing/README.md
+      - Overview: 4.Eradication/4.03_Deploy_network_intrusion_detection_system/README.md
+      - Overview: 4.Eradication/4.04_Monitor_NIDS_and_Report_Threats/README.md
+      - Overview: 4.Eradication/4.05_SIEM_Events_to_IDS_and_network_logs/README.md
+      - Overview: 4.Eradication/4.06_Evaluate_Host_Kernel_to_Check_for_Rootkits/README.md
+      - Overview: 4.Eradication/4.07_Use_Host_Log_Data_to_Evaluate_System_Processes/README.md
+      - Overview: 4.Eradication/4.08_Deploy_or_evaluate_host_sensors/README.md
+      - Overview: 4.Eradication/4.09.02_Configure_SO_Syslog_Server/README.md
+      - Overview: 4.Eradication/4.09.1_Configure_Snort_Rules/README.md
+      - Overview: 4.Eradication/4.09.3_Evaluate_Network_Baseline/README.md
+      - Overview: 4.Eradication/4.09.4_Evaluate_Host_Baseline/README.md
+      - Overview: 4.Eradication/4.09.5_Detect_Rouge_Wireless_AP/README.md
+      - Overview: 4.Eradication/4.09.6_Detect_Remove_Rouge_Network_Devices/README.md
+      - Overview: 4.Eradication/4.09_Install_and_Deploy_Security_Onion/README.md
+      - Overview: 4.Eradication/4.10_PAN_Forward_Syslog_SO/README.md
+      - Overview: 4.Eradication/4.11_Monitoring_account_creation_SO/README.md
+      - Overview: 4.Eradication/4.12_Detect_network_vulnerability_scans_SO/README.md
+      - Overview: 4.Eradication/4.13_Detect_SMB_using_SO/README.md
+      - Overview: 4.Eradication/4.14_Monitor_AD_New_Account_Creation/README.md
+      - Overview: 4.Eradication/4.15_Monitor_DHCP_for_new_reservations/README.md
+      - Overview: 4.Eradication/4.16_Monitor_AD_for_new_DNS_names/README.md
+      - Overview: 4.Eradication/4.17_Respond_to_alerts_about_unauthorized_users/README.md
+      - Overview: 4.Eradication/4.18_Compare_hashes_of_suspected_malware/README.md
+      - Overview: 4.Eradication/4.19_Perform_manual_host_analysis/README.md
+      - Overview: 4.Eradication/4.19_Perform_manual_host_analysis/4.19.1_Perform_Manual_Host_Analysis_Live_Physical_Host_Windows/README.md
+      - Overview: 4.Eradication/4.19_Perform_manual_host_analysis/4.19.2_Perform_Manual_Host_Analysis_Memory_Image_File/README.md
+      - Overview: 4.Eradication/4.19_Perform_manual_host_analysis/4.19.3_Create_Hard_Disk_Image/README.md
+      - Overview: 4.Eradication/4.20_Investigate_Alerts_From_Host_Sensors/README.md
+      - Overview: 4.Eradication/4.21_Find_and_contain_rogue_workstations/README.md
+      - Overview: 4.Eradication/4.22_Block_unauthorized_software/README.md
+      - Overview: 4.Eradication/4.23_Stop_Credential_reuse_attack/README.md
+      - Overview: 4.Eradication/4.24_Stop_brute_force_attack/README.md
+      - Overview: 4.Eradication/4.25_Stop_malware_rootkit/README.md
+      - Overview: 4.Eradication/4.26_Stop_data_exfiltration/README.md
+      - Overview: 4.Eradication/4.27_Stop_malware_backdoor/README.md
+      - Overview: 4.Eradication/4.28_Stop_C2_Beaconing/README.md
+      - Overview: 4.Eradication/4.30_Security_Onion_Hunting/README.md
+      - placeholder: 4.Eradication/4.30_Security_Onion_Hunting/EventLogExamples/placeholder.md
+      - Overview: 4.Eradication/4.41_Run_Vuln_Scan/README.md
+      - Overview: 4.Eradication/4.43_Check_for_Rootkits/README.md
+      - Overview: 4.Eradication/4.44_Remove_Unauthorized_User_Accounts/README.md
+      - Overview: 4.Eradication/4.45_Check_for_Unauthorized_Scheduled_Tasks_Services/README.md
+      - Overview: 4.Eradication/4.46_Check_for_Unauthorized_Software_Tools/README.md
+      - Overview: 4.Eradication/4.47_Remove_Attacker_Persistence/README.md
+      - Overview: 4.Eradication/4.48_Validate_Eradication_Completion/README.md
+      - Overview: 4.Eradication/4.49_Coordinate_Transition_to_Recovery/README.md
+      - Overview: 4.Eradication/4.50_Perform_Handoff_to_Recovery/README.md
+      - Overview: 4.Eradication/4.51_Perform_Recovery_Monitoring_Validation/README.md
+      - Overview: 4.Eradication/4.52_Finalize_Eradication_Documentation_Reporting/README.md
+      - Overview: 4.Eradication/4.53_Evaluate_Physical_Security_Access/README.md
+      - Overview: 4.Eradication/4.54_Verify_Wireless_Security/README.md
+      - Overview: 4.Eradication/4.55_Verify_Network_Segmentation/README.md
+      - Overview: 4.Eradication/4.56_Remove_Unauthorized_Users_AD_Cloud/README.md
+      - Overview: 4.Eradication/4.57_Remove_Unauthorized_Devices/README.md
+      - Overview: 4.Eradication/4.58_Remove_Unauthorized_Services/README.md
+      - Overview: 4.Eradication/4.59_Remove_Unauthorized_Scheduled_Tasks_Automation/README.md
+      - Overview: 4.Eradication/4.60_Remove_Unauthorized_DNS_Entries/README.md
+      - Overview: 4.Eradication/4.61_Validate_All_Endpoint_Gaps/README.md
+      - Overview: 4.Eradication/4.62_Validate_Persistence_Mechanisms_Removed/README.md
+      - Overview: 4.Eradication/4.63_Validate_No_Unauthorized_Network_Traffic/README.md
+      - Overview: 4.Eradication/4.64_Validate_Unsanctioned_Accounts_APIs/README.md
+      - Overview: 4.Eradication/4.65_Validate_Malware_Removal/README.md
+      - Overview: 4.Eradication/4.66_Validate_Critical_Security_Controls_Monitoring/README.md
+      - Overview: 4.Eradication/4.67_Validate_Clean_Backups_Recovery/README.md
+  - 5 - Recovery:
+      - Overview: 5.Recovery/README.md
+      - Overview: 5.Recovery/5.01_Vulnerability_Scans/README.md
+      - Overview: 5.Recovery/5.02_Cyber-Security-Improvements/README.md
+      - Overview: 5.Recovery/5.03_Firewall_Analysis/README.md
+      - Overview: 5.Recovery/5.04_Password_Requirements/README.md
+      - Overview: 5.Recovery/5.05_Create_new_baselines/README.md
+      - Overview: 5.Recovery/5.06_Syslog_Retention/README.md
+      - Overview: 5.Recovery/5.07_Patch_Management/README.md
+      - Overview: 5.Recovery/5.08_User_Cyber_Training/README.md
+      - Overview: 5.Recovery/5.09_System_Restoration/README.md
+      - Overview: 5.Recovery/5.10_Account_Audit/README.md
+      - Overview: 5.Recovery/5.11_Turn_Over_Mission_Related_Documents/README.md
+      - Overview: 5.Recovery/5.12_Creating_Clean_Backups/README.md
+      - Overview: 5.Recovery/5.13-Conduct_Outbriefing/README.md
+      - Overview: 5.Recovery/5.14-Conduct_AAR/README.md
+  - 6 - LessonsLearned:
+      - Overview: 6.LessonsLearned/README.md
+      - Overview: 6.LessonsLearned/6.01-After_Action_Review/README.md
   - Reference Documents:
-      - Overview: ReferenceDocuments/README.md
+      - PowerShell Commands: ReferenceDocuments/PowerShell_Commands.md
+      - README: ReferenceDocuments/README.md
 
 markdown_extensions:
   - admonition
