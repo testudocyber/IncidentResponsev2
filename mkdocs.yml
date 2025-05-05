@@ -1,5 +1,5 @@
 site_name: Incident Response Handbook
- site_url: https://testudocyber.github.io/IncidentResponsev3/
+ site_url: https://testudocyber.github.io/IncidentResponsev2/
  theme:
    name: material
    features:
